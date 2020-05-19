@@ -27,6 +27,6 @@ df18 = openfile('2018-19dataset')
 df19 = openfile('2019-20dataset')
 df_allyears = [df07, df08, df09, df10, df11, df12, df13, df14, df15,
                df16, df17, df18, df19]
-print(df_allyears[1][1])
-
-# testchange
+outfile = open("2007-20dataset", 'wb')
+pickle.dump(df_allyears, outfile)
+outfile.close()
