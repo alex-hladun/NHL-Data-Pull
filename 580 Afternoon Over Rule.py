@@ -128,3 +128,4 @@ print(len(scoretotals))
 # carvswshWLratio = carvswshWLrecord['wins']/(carvswshWLrecord['wins']+carvswshWLrecord['losses'] + carvswshWLrecord['ot'])
 # print(carvswshWLratio)
 # print(schedule_data['dates'][1]['games'][1]['teams']['home']['score'])
+# changed slightly
