@@ -2,7 +2,7 @@ import pickle
 import pandas as pd
 from ArrayFunction import gamearray
 from CleanTimeFunction import cleantimeanddate
-from NHLOddsMerger import NHLoddsmerger
+from NHLOddsMergerFunction import NHLoddsmerger
 
 
 def importmergeddataset(url, DSTdate, Excelfilepath, importfilename):
