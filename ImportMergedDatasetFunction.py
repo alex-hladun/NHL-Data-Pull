@@ -12,4 +12,3 @@ def importmergeddataset(url, DSTdate, Excelfilepath, importfilename):
     outfile = open(importfilename, 'wb')
     pickle.dump(df1, outfile)
     outfile.close()
-

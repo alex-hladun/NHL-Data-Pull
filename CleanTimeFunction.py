@@ -1,6 +1,7 @@
 def cleantimeanddate(df1, DSTdate):
     # takes list of arrays from gamearray function, and cleans up time and
     # date data (makes easier to read, and converts Zulu time to local time)
+    # date must be in format "522" for May 22 or "1012" for October 12, etc
 
     Pacific1 = ["Vegas Golden Knights", "Anaheim Ducks",
                 "Vancouver Canucks", "San Jose Sharks", "Los Angeles Kings"]
@@ -35,6 +36,8 @@ def cleantimeanddate(df1, DSTdate):
             if DST == False and row['hometeam'] in Pacific1:
                 hour = hour - 8
             elif (DST == False and row['hometeam'] in Mountain1) or (DST == True and row['hometeam'] in Pacific2):
+                hour = hour - 7
+            elif (DST == False and row['hometeam'] in Central) or (DST == True and row['hometeam'] in Mountain2):
                 hour = hour - 6
             elif (DST == False and row['hometeam'] in Eastern) or (DST == True and row['hometeam'] in Central):
                 hour = hour - 5

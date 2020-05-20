@@ -16,7 +16,7 @@ Again, this file is a LIST of dataframes, organized by date with all odds data.
 
 The file "ImportMergedDataforEachYear" is just an example of using this final function to import data for 07-08 season. I've done this for every other season as well, and the pickle files are in the Github (2007-08dataset, 2008-09dataset etc), see 4 lines of code above for how to import these files as datasets. 
 
-I then created a short file "CombineAllYears" that combines all of this data into one big dataset, also in this file, saved as "2007-20 dataset." This file has each year of data as an item in a list. Each of these items is a list of dates for that season. Each date is a dataframe containing the games for that day as rows. Essentially it's a list of list of dataframes. Listception.
+I then created a short file "CombineAllYears" that combines all of this data into one big dataset, also in this GitHub, saved as "2007-20 dataset." This file has each year of data as an item in a list. Each of these items is a list of dates for that season. Each date is a dataframe containing the games for that day as rows. Essentially it's a list of lists of dataframes. Listception.
 
 This dataset could then be used to quickly test betting strategies, which I haven't really got to yet, other than a couple other random files in here (HomeRecord580AfternoonOver, VisitorUnderdogAfternoonHome550W%).
 
