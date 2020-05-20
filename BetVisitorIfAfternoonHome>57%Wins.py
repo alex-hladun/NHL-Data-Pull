@@ -8,7 +8,6 @@ filename = '2007-20dataset'
 infile = open(filename, 'rb')
 df1 = pickle.load(infile)
 infile.close()
-print(df1[1])
 df2 = pd.DataFrame()
 for year in range(len(df1)):
     for date in range(len(df1[year])):
@@ -24,17 +23,20 @@ for year in range(len(df1)):
             else:
                 awayteamWLratio = 0
             hometeamGP = row['homeWs'] + row['homeLs'] + row['homeOTLs']
-        if hometeamWLratio >= 0.57 and hometeamGP >= 25 and row['hour'] <= 16:
-            df2 = df2.append(df1[year][date].iloc[index, :])
+            if awayteamWLratio <= 0.48 and hometeamGP >= 15 and row['hour'] <= 16:
+                df2 = df2.append(df1[year][date].iloc[index, :])
 moneylineWL = []
 profit = []
 for index, row in df2.iterrows():
-    if row['awaygoals'] > row['homegoals']:
+    if type(row['homecloseodds']) is list:
+        moneylineWL.append('push')
+        profit.append(0)
+    elif row['homegoals'] > row['awaygoals']:
         moneylineWL.append('W')
-        if row['awaycloseodds'] > 0:
-            profit.append(row['awaycloseodds']/100)
+        if row['homecloseodds'] > 0:
+            profit.append(row['homecloseodds']/100)
         else:
-            profit.append(-100/row['awaycloseodds'])
+            profit.append(-100/row['homecloseodds'])
     else:
         moneylineWL.append('L')
         profit.append(-1)
