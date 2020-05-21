@@ -10,8 +10,8 @@ dfx = pd.read_excel(
     '/Users/willmadsen/Documents/Python Stuff/Sports Betting Code/WeekendDates.xlsx')
 n = 0
 weekenddateYN = []
-for year in range(len(df1)):
-    for date in range(len(df1[year])):
+for year in range(1):
+    for date in range(5):
         weekenddateYNlist = []
         for index, row in df1[year][date].iterrows():
             for index2, row2 in dfx.iterrows():
