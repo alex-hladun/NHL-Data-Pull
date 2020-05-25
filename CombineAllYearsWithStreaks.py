@@ -15,9 +15,9 @@ def openfile(filename):
     for team in fullTeamList:
         teamStreak[team] = 0
 
-    homeTeamStreak =[]
-    awayTeamStreak = []
     for date in range(len(df1)):
+        homeTeamStreak =[]
+        awayTeamStreak = []
         # print(date)
         # print(year)
         for index, row in df1[date].iterrows():
@@ -53,8 +53,8 @@ def openfile(filename):
                 else:
                     teamStreak[row['awayteam']] = 1
 
-    df1['homeTeamStreak'] = homeTeamStreak
-    df1['awayTeamStreak'] = awayTeamStreak
+        df1[date]['homeTeamStreak'] = homeTeamStreak
+        df1[date]['awayTeamStreak'] = awayTeamStreak
     return df1
 
 
