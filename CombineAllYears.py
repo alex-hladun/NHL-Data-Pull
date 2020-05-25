@@ -9,6 +9,7 @@ def openfile(filename):
     infile = open(filename, 'rb')
     df1 = pickle.load(infile)
     infile.close()
+    
     return df1
 
 
@@ -27,6 +28,6 @@ df18 = openfile('2018-19dataset')
 df19 = openfile('2019-20dataset')
 df_allyears = [df07, df08, df09, df10, df11, df12, df13, df14, df15,
                df16, df17, df18, df19]
-outfile = open("2007-20dataset", 'wb')
+outfile = open("2007-20datasetV2", 'wb')
 pickle.dump(df_allyears, outfile)
 outfile.close()

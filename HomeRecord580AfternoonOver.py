@@ -3,9 +3,10 @@ from openpyxl import load_workbook
 import pandas as pd
 import numpy as np
 import pickle
-filename = '2007-08dataset'
+filename = '2007-20dataset'
 infile = open(filename, 'rb')
 df1 = pickle.load(infile)
+# print(df1)
 infile.close()
 df2 = pd.DataFrame()
 for i in range(len(df1)):
@@ -50,11 +51,11 @@ df2 = df2[['year', 'gamedate', 'gametype', 'hour', 'mins', 'hometeam', 'homegoal
 print(df2)
 sum = df2['profit'].sum()
 print(sum)
-path = r'/Users/willmadsen/Documents/Python Stuff/Sports Betting Code/homerecord580afternoonover.xlsx'
-book = load_workbook(path)
+# path = r'/Users/willmadsen/Documents/Python Stuff/Sports Betting Code/homerecord580afternoonover.xlsx'
+# book = load_workbook(path)
 
-writer = pd.ExcelWriter(path, engine='openpyxl')
-writer.book = book
-df2.to_excel(writer, '07-08')
-writer.save()
-writer.close()
+# writer = pd.ExcelWriter(path, engine='openpyxl')
+# writer.book = book
+# df2.to_excel(writer, '07-08')
+# writer.save()
+# writer.close()

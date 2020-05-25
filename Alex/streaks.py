@@ -3,7 +3,7 @@ from openpyxl import load_workbook
 import pandas as pd
 import numpy as np
 import pickle
-filename = '2007-20dataset'
+filename = '2007-20datasetV2'
 infile = open(filename, 'rb')
 df1 = pickle.load(infile)
 infile.close()
@@ -12,16 +12,16 @@ df2 = pd.DataFrame()
 fullTeamList = ['Calgary Flames', 'Phoenix Coyotes', 'Edmonton Oilers', 'Arizona Coyotes', 'Colorado Avalanche', 'Vegas Golden Knights', 'Anaheim Ducks', 'Vancouver Canucks', 'San Jose Sharks', 'Los Angeles Kings', 'Carolina Hurricanes', 'Pittsburgh Penguins', 'Tampa Bay Lightning', 'Detroit Red Wings', 'Columbus Blue Jackets', 'Washington Capitals', 'Buffalo Sabres', 'Florida Panthers', 'Toronto Maple Leafs', 'Montréal Canadiens', 'New Jersey Devils', 'Boston Bruins', 'Philadelphia Flyers', 'New York Rangers', 'New York Islanders', 'Ottawa Senators', 'Atlanta Thrashers', 'St. Louis Blues', 'Chicago Blackhawks', 'Minnesota Wild', 'Winnipeg Jets', 'Nashville Predators', 'Dallas Stars']
 
 # Creates a dictionary with each team, and their current streak
-teamStreak = {}
-for team in fullTeamList:
-    teamStreak[team] = 0
+# teamStreak = {}
+# for team in fullTeamList:
+#     teamStreak[team] = 0
 
 for year in range(len(df1)):
-    homeTeamStreak =[]
-    awayTeamStreak = []
+    # homeTeamStreak =[]
+    # awayTeamStreak = []
     for date in range(len(df1[year])):
-        print(date)
-        print(year)
+        # print(date)
+        # print(year)
         for index, row in df1[year][date].iterrows():
             # Assign pre-game win/lose streaks for each game 
             homeTeamStreak.append(teamStreak[row['hometeam']])

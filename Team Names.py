@@ -1,4 +1,4 @@
-Team Names
+# Team Names
 Pacific1 = ["Vegas Golden Knights", "Anaheim Ducks",
             "Vancouver Canucks", "San Jose Sharks", "Los Angeles Kings"]
 Pacific2 = ["Vegas Golden Knights", "Anaheim Ducks", "Vancouver Canucks", "San Jose Sharks",
@@ -31,3 +31,17 @@ EasternTimes1 = ["T15:00:00Z", "T15:30:00Z", "T16:00:00Z", "T16:30:00Z", "T17:00
                  "T18:30:00Z", "T19:00:00Z", "T19:30:00Z", "T20:00:00Z", "T20:30:00Z", "T21:00:00Z", "T21:30:00Z"]
 EasternTimes2 = ["T14:00:00Z", "T14:30:00Z", "T15:00:00Z", "T15:30:00Z", "T16:00:00Z", "T16:30:00Z", "T17:00:00Z",
                  "T17:30:00Z", "T18:00:00Z", "T18:30:00Z", "T19:00:00Z", "T19:30:00Z", "T20:00:00Z", "T20:30:00Z"]
+
+for team in Eastern:
+  Pacific2.append(team)
+
+for team in Central:
+  Pacific2.append(team)
+
+for team in Mountain1:
+  Pacific2.append(team)
+
+print(Pacific2)
+
+fullTeamList = ['Arizona Coyotes', 'Colorado Avalanche', 'Vegas Golden Knights', 'Anaheim Ducks', 'Vancouver Canucks', 'San Jose Sharks', 'Los Angeles Kings', 'Carolina Hurricanes', 'Pittsburgh Penguins', 'Tampa Bay Lightning', 'Detroit Red Wings', 'Columbus Blue Jackets', 'Washington Capitals', 'Buffalo Sabres', 'Florida Panthers', 'Toronto Maple Leafs', 'Montréal Canadiens', 'New Jersey Devils', 'Boston Bruins', 'Philadelphia Flyers', 'New York Rangers', 'New York Islanders', 'Ottawa Senators', 'Atlanta Thrashers', 'St. Louis Blues', 'Chicago Blackhawks', 'Minnesota Wild', 'Winnipeg Jets', 'Nashville Predators', 'Dallas Stars']
+print(fullTeamList)

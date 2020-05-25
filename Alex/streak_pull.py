@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 import requests
 
-url = 'https://statsapi.web.nhl.com/api/v1/schedule?startDate=2014-10-08&endDate=2015-06-15'
-url2 = 'https://statsapi.web.nhl.com/api/v1/standings?date=2014-10-19'
+url2 = 'https://statsapi.web.nhl.com/api/v1/schedule?startDate=2014-10-08&endDate=2015-06-15'
+url = 'https://statsapi.web.nhl.com/api/v1/standings/wildCardWithLeaders?date=2018-01-16'
 
 
 def gamearray(url):
